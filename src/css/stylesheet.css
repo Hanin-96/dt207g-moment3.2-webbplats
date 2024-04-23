@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 1920px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    margin: 0 auto;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/*Header*/
+header {
+    background-color: #1a1a1a;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+h1 a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 4.2rem;
+    margin-bottom: 2rem;
+}
+
+header h1,
+nav {
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    margin-top: 1rem;
+    background-color: #405e79;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.4rem;
+}
+
+
+li {
+    list-style: none;
+    padding: 1rem 2rem;
+}
+
+#active {
+    background-color: #f0f8ff;
+}
+
+#active a {
+    color: #1a1a1a;
+}
+
+/*Main content*/
+main {
+    padding: 2rem;
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f0f8ff;
+    margin-bottom: 20rem;
+}
+
+
+form input,
+labels {
+    display: block;
+    font-size: 1.8rem;
+}
+
+form input {
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: solid 0.2rem #405e79;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: solid 0.2rem #405e79;
+}
+
+button {
+    margin-bottom: 3rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: #405e79;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a1a1a;
+}
+
+#btn-submit {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 2.4rem;
+    background-color: #405e79;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#btn-submit:hover {
+    background-color: #1a1a1a;
+}
+
+#error {
+    margin-bottom: 2rem;
+}
+
+.cv-article {
+    border-top: 0.4rem solid #1a1a1a;
+}
+
+.cv-wrap-title {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+article h2 {
+    margin-bottom: 1rem;
+}
+
+article h3 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
