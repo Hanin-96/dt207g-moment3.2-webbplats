@@ -7,7 +7,7 @@ async function loadCv() {
     document.getElementById("cv-wrap").innerHTML = "";
 
     try {
-        const response = await fetch("https://dt207g-moment-2.onrender.com/api/cv");
+        const response = await fetch("https://dt207g-moment3-2-data.onrender.com/cv");
         const data = await response.json();
         //console.log(data);
 
@@ -20,37 +20,36 @@ async function loadCv() {
 
 function displayCv(cvData) {
     cvData.forEach(cv => {
-        //console.log(cv);
-        document.getElementById("cv-wrap").innerHTML +=
-            `<article class="cv-article">
-                <h2 class="cv-wrap-title">${cv.job_title}</h2>
-                <p class="cv-company">${cv.company_name}</p>
-                <p class="cv-location">${cv.location}</p>
-                <p class="cv-description">${cv.description}</p>
-            </article>`
+    
+        let btnDelete = document.createElement("button");
+        btnDelete.textContent = "Ta bort";
+        btnDelete.addEventListener("click", () => deleteCv(cv._id));
+    
+        let cvWrap = document.getElementById("cv-wrap");
+        let cvArticle = document.createElement("article");
+        cvArticle.className = "cv-article";
+        cvArticle.innerHTML = `
+            <h2 class="cv-wrap-title">${cv.job_title}</h2>
+            <p class="cv-company">${cv.company_name}</p>
+            <p class="cv-location">${cv.location}</p>
+            <p class="cv-description">${cv.description}</p>
+        `;
+        cvArticle.appendChild(btnDelete);
+        cvWrap.appendChild(cvArticle);
 
-            let cvWrap = document.getElementById("cv-wrap");
-            let btnDelete = document.createElement("button");
-            let btnText = document.createTextNode("Ta bort");
-
-            btnDelete.appendChild(btnText);
-
-            cvWrap.appendChild(btnDelete);
-
-            btnDelete.addEventListener("click", () => {
-                deleteCv(cv.cv_id);
-            })
     });
 }
 
 async function deleteCv(cvId) {
     //Fetch anrop för att lägga till cv med POST
     try {
-        const response = await fetch("https://dt207g-moment-2.onrender.com/api/cv/" + cvId, {
+        //console.log(cvId);
+        const response = await fetch("https://dt207g-moment3-2-data.onrender.com/cv/" + cvId, {
             method: "DELETE",
         });
 
         //console.log(response);
+
 
         if (!response.error) {
             loadCv();

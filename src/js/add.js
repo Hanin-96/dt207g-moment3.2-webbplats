@@ -23,14 +23,14 @@ async function addCv(event) {
 
     //Fetch anrop för att lägga till cv med POST
     try {
-        const response = await fetch("https://dt207g-moment-2.onrender.com/api/cv", {
+        const response = await fetch("https://dt207g-moment3-2-data.onrender.com/cv", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                jobTitle: jobTitleInput,
-                companyName: companyInput,
+                job_title: jobTitleInput,
+                company_name: companyInput,
                 location: locationInput,
                 description: descriptionInput
             })

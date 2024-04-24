@@ -15,18 +15,21 @@ body {
     font-size: 1.8rem;
     margin: 0 auto;
     background-color: #ffffff;
-    color: #1a1a1a;
+    color: #ffffff;
 }
 
+p {
+    line-height: 150%;
+}
 /*Header*/
 header {
-    background-color: #1a1a1a;
+    background-color: #D2D6EF;
     width: 100%;
     padding-top: 2rem;
 }
 
 h1 a {
-    color: #ffffff;
+    color: #32373a;
     text-decoration: none;
     font-size: 4.2rem;
     margin-bottom: 2rem;
@@ -42,34 +45,42 @@ nav {
 }
 
 nav {
-    margin-top: 1rem;
-    background-color: #405e79;
+    background-color: #F4F1BB;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-
 }
 
 nav ul li a {
-    color: white;
+    color: #32373a;
     text-decoration: none;
     font-size: 2.4rem;
+    padding: 1rem;
 }
 
 
 li {
     list-style: none;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
 }
 
 #active {
-    background-color: #f0f8ff;
+    background-color: #1E352F;
+}
+
+nav ul li:hover {
+    background-color: #1E352F;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    padding: 1rem;
 }
 
 #active a {
-    color: #1a1a1a;
+    color: #ffffff;
 }
 
 /*Main content*/
@@ -78,10 +89,14 @@ main {
     max-width: 50rem;
     width: 100%;
     margin: 0 auto;
-    background-color: #f0f8ff;
+    background-color: #1E352F;
     margin-bottom: 20rem;
+    border-radius: 0 0 10rem;
 }
 
+form {
+    margin-bottom: 10rem;
+}
 
 form input,
 labels {
@@ -108,28 +123,33 @@ button {
     margin-top: 0.5rem;
     padding: 1rem;
     font-size: 2rem;
-    background-color: #405e79;
-    color: white;
+    background-color: #d2d6ef;
+    color: #32373a;
     border: none;
     cursor: pointer;
+    transition: ease-out 0.1s;
 }
 
 button:hover {
-    background-color: #1a1a1a;
+    background-color: #F4F1BB;
+    box-shadow: #d2d6ef inset 0px 0px 10px 5px;
+    border-radius: 50rem;
 }
 
 #btn-submit {
     margin-top: 2rem;
     padding: 1rem;
     font-size: 2.4rem;
-    background-color: #405e79;
-    color: white;
+    background-color: #d2d6ef;
+    color: #32373a;
     border: none;
     cursor: pointer;
 }
 
 #btn-submit:hover {
-    background-color: #1a1a1a;
+    background-color: #F4F1BB;
+    box-shadow: #d2d6ef inset 0px 0px 10px 5px;
+    border-radius: 50rem;
 }
 
 #error {
@@ -137,7 +157,7 @@ button:hover {
 }
 
 .cv-article {
-    border-top: 0.4rem solid #1a1a1a;
+    border-top: 0.4rem dashed #F4F1BB;
 }
 
 .cv-wrap-title {
